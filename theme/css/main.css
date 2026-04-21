@@ -437,3 +437,380 @@ li:first-child .hentry, #content > .hentry {border: 0; margin: 0;}
 
 #add-comment input[type='submit'] {float: right; margin: 0 .5em;}
 #add-comment * {margin-bottom: .5em;}
+
+
+/* =================================================================
+   Sean Mulcahy overrides — appended to guarantee load order wins
+   WWU brand palette (marcom.wwu.edu/colors):
+     Dark Blue  #003F87   Light Blue  #007AC8
+     Dark Green #006B3F   Black #1C2023   Gray #667986
+   ================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+:root {
+  --blue-dark:  #003F87;
+  --blue:       #007AC8;
+  --blue-pale:  #eef5fb;
+  --black:      #1C2023;
+  --gray:       #667986;
+  --gray-light: #e8ebed;
+  --border:     #d0d8de;
+}
+
+body {
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--black);
+  background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1.4em;
+  margin-bottom: 0.5em;
+  color: var(--black);
+}
+
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.15rem; }
+h4, h5, h6 { font-size: 1rem; }
+
+p { margin-top: 0; margin-bottom: 1em; }
+
+a:link, a:visited {
+  color: var(--blue-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  padding: 0;
+  background: none;
+}
+
+a:hover, a:active {
+  color: var(--blue);
+  background: none;
+  text-decoration: underline;
+  text-shadow: none;
+}
+
+/* ── Header ── */
+#banner {
+  padding: 1.25rem 0 0;
+}
+
+#banner h1 {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 0.6rem 0;
+}
+
+#banner h1 a:link, #banner h1 a:visited {
+  color: var(--blue-dark);
+  text-decoration: none;
+  background: none;
+  padding: 0;
+  display: inline;
+  margin: 0;
+  font-weight: 700;
+}
+
+#banner h1 a:hover, #banner h1 a:active {
+  color: var(--blue);
+  background: none;
+  text-shadow: none;
+}
+
+#banner h1 strong {
+  display: block;
+  font-size: 0.55em;
+  font-weight: 300;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  color: var(--gray);
+  letter-spacing: 0.01em;
+  margin-top: 0.15em;
+}
+
+/* ── Navigation ── */
+#banner nav {
+  background: var(--blue-dark);
+  border-radius: 0;
+  margin: 0.75rem 0 1.5rem;
+  line-height: 1;
+  overflow: visible;
+  text-align: left;
+}
+
+#banner nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: none;
+}
+
+#banner nav li {
+  float: none;
+  display: flex;
+  margin: 0;
+}
+
+#banner nav a:link, #banner nav a:visited {
+  color: rgba(255,255,255,0.88);
+  display: inline-flex;
+  align-items: center;
+  height: auto;
+  padding: 0.7rem 1.1rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: none;
+}
+
+#banner nav a:hover, #banner nav a:active,
+#banner nav .active a:link, #banner nav .active a:visited {
+  background: var(--blue);
+  color: #fff;
+  text-shadow: none;
+}
+
+#banner nav li:first-child a {
+  border-radius: 0;
+}
+
+/* ── Featured post ── */
+#featured {
+  background: var(--blue-pale);
+  border: none;
+  border-left: 4px solid var(--blue);
+  border-radius: 0;
+  padding: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  max-width: 760px;
+  box-shadow: none;
+}
+
+#featured .entry-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.3em;
+  margin-top: 0;
+}
+
+#featured .entry-title a:link, #featured .entry-title a:visited {
+  color: var(--blue-dark);
+  text-decoration: none;
+  background: none;
+}
+
+#featured .entry-title a:hover {
+  color: var(--blue);
+  background: none;
+}
+
+#featured figure {
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  margin: 0 0 0 2em;
+  float: right;
+  max-width: 220px;
+}
+
+/* ── Content / post list ── */
+#content {
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  box-shadow: none;
+}
+
+#content > h1 {
+  font-size: 0.8rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.hentry {
+  border-top: 1px solid var(--gray-light);
+  padding: 1.1rem 0;
+}
+
+li:first-child .hentry { border-top: none; }
+
+.entry-title {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 0.2em;
+  line-height: 1.3;
+}
+
+.entry-title a:link, .entry-title a:visited {
+  color: var(--black);
+  text-decoration: none;
+  background: none;
+  padding: 0;
+}
+
+.entry-title a:hover {
+  color: var(--blue-dark);
+  text-decoration: underline;
+  background: none;
+}
+
+.post-info {
+  float: none;
+  margin: 0 0 0.4em;
+  padding: 0;
+}
+
+.post-info p, .post-info address { display: none; }
+
+.post-info abbr.published {
+  display: inline;
+  color: var(--gray);
+  font-size: 0.8rem;
+  font-style: normal;
+  text-decoration: none;
+  border: none;
+}
+
+#posts-list footer {
+  float: none;
+  position: static;
+  max-width: none;
+  margin: 0 0 0.3em;
+  left: auto;
+  top: auto;
+}
+
+.readmore {
+  float: none;
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--blue-dark);
+  text-decoration: none;
+}
+
+.readmore:hover { color: var(--blue); text-decoration: underline; }
+.readmore::after { content: ' →'; }
+
+/* ── Extras / social ── */
+#extras { margin-top: 0.5rem; margin-bottom: 1.5rem; }
+
+#extras h2 {
+  font-size: 0.72rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gray);
+  margin-bottom: 0.4rem;
+  padding: 0;
+}
+
+#extras ul { list-style: none; margin: 0; }
+#extras li { border-bottom: none; margin: 0 0 0.25em; }
+
+#extras a:link, #extras a:visited {
+  color: var(--blue-dark);
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  font-size: 0.88rem;
+  display: inline;
+  background: none;
+}
+
+#extras a:hover { color: var(--blue); background: none; }
+#extras .social { float: none; max-width: none; }
+
+/* ── Footer ── */
+#contentinfo {
+  padding: 1.25rem 0 2rem;
+  text-align: left;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-top: 0.5rem;
+}
+
+#contentinfo a:link, #contentinfo a:visited {
+  color: var(--gray);
+  background: none;
+  padding: 0;
+}
+
+#contentinfo a:hover { color: var(--blue-dark); background: none; }
+
+/* ── Blockquote / code ── */
+blockquote {
+  border-left: 3px solid var(--blue);
+  padding: 0.4em 0 0.4em 1.2em;
+  margin: 1.2em 0;
+  font-style: italic;
+  color: #444;
+}
+
+hr { border: none; border-top: 1px solid var(--border); margin: 1.75rem 0; }
+
+/* ── About page ── */
+.bio-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid var(--border);
+}
+
+.bio-panel img { width: 180px; min-width: 160px; border-radius: 3px; flex-shrink: 0; }
+.bio-panel .bio-text { flex: 1; }
+
+.about-photo {
+  float: right;
+  margin: 0 0 1em 2em;
+  width: 180px;
+  border-radius: 3px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  body { font-size: 0.97rem; }
+  #banner h1 { font-size: 1.3rem; }
+  #banner nav ul { flex-direction: column; }
+  #banner nav li { display: block; }
+  #banner nav a:link, #banner nav a:visited { padding: 0.55rem 1rem; font-size: 0.9rem; }
+  #featured { padding: 1rem; border-left-width: 3px; }
+  #featured figure { float: none; margin: 0 0 1em; max-width: 100%; }
+  .bio-panel { flex-direction: column; }
+  .bio-panel img, .about-photo { float: none; width: 100%; min-width: unset; margin: 0 0 1em; }
+}
+
+/* ── Print ── */
+@media print {
+  #banner nav, #extras, #contentinfo { display: none; }
+  body { font-size: 11pt; }
+}
